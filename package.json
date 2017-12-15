@@ -1,5 +1,5 @@
 {
-  "name": "node-webpay",
+  "name": "node-webpayby",
   "version": "0.0.0",
   "description": "Node module for Webpay API.",
   "main": "index.js",
