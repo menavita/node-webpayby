@@ -1,0 +1,30 @@
+{
+  "name": "node-webpay",
+  "version": "0.0.0",
+  "description": "Node module for Webpay API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 5000 test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/menavita/node-webpayby.git"
+  },
+  "keywords": [
+    "webpay"
+  ],
+  "author": "noglik",
+  "license": "MIT",
+  "dependencies": {
+    "q": "^1.5.1",
+    "request": "^2.83.0"
+  },
+  "bugs": {
+    "url": "https://github.com/menavita/node-webpayby/issues"
+  },
+  "homepage": "https://github.com/menavita/node-webpayby#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "should": "^13.1.3"
+  }
+}
