@@ -1,10 +1,8 @@
 'use strict';
 
 var crypto = require('crypto');
-var request = require('request');
-var Q = require('q');
 
-exports.createSignature = function(params) {
+exports.createSignature = function(params, key) {
 
   var united = params.wsb_seed 
     + params.wsb_storeid 
@@ -12,7 +10,7 @@ exports.createSignature = function(params) {
     + params.wsb_test 
     + params.wsb_currency_id 
     + params.wsb_total 
-    + this.key;
+    + key;
 
   switch (parseInt(params.wsb_version)) {
     case 1:
@@ -29,7 +27,7 @@ exports.createSignature = function(params) {
 
 }
 
-exports.checkSignature = function(params) {
+exports.checkSignature = function(params, key) {
 
   if (!params.wsb_signature) return false;
 
@@ -42,7 +40,7 @@ exports.checkSignature = function(params) {
     + params.transaction_id 
     + params.payment_type 
     + params.rrn 
-    + this.key;
+    + key;
 
   if (params.wsb_signature == crypto.createHash('md5').update(united).digest('hex')) {
     return true;

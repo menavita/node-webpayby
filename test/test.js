@@ -17,7 +17,7 @@ describe('Webpay', function() {
       wsb_invoice_item_price: [10],
       wsb_total: 10,
       wsb_notify_url: 'http://office.fyva.pro:4000/payment/wb',
-    });
+    }, 'secret_key');
     console.log(signature);
   })
   
@@ -33,7 +33,7 @@ describe('Webpay', function() {
       payment_type, 
       rrn,
       wsb_signature, 
-    });
+    }, 'secret_key');
     if (check) {
       console.log('True signature');
     } else {

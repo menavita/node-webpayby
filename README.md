@@ -21,7 +21,7 @@ var signature = Webpay.createSignature({
   wsb_invoice_item_price: [10],
   wsb_total: 10,
   wsb_notify_url: 'http://notify.url.by/',
-});
+}, 'secret_key');
 ```
 ### Check signature.
 Return boolean.
@@ -37,7 +37,7 @@ var check = Webpay.checkSignature({
   payment_type, 
   rrn,
   wsb_signature, 
-});
+}, 'secret_key');
 ```
 ## Test
 ```javascript
