@@ -1,6 +1,6 @@
 {
   "name": "node-webpayby",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node module for Webpay API.",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,6 @@
   "author": "noglik",
   "license": "MIT",
   "dependencies": {
-    "q": "^1.5.1",
-    "request": "^2.83.0"
   },
   "bugs": {
     "url": "https://github.com/menavita/node-webpayby/issues"
